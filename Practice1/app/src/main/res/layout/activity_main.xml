@@ -6,7 +6,9 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/background">
+
+
+    >
 
     <TextView
         android:id="@+id/heading"
@@ -52,12 +54,20 @@
         android:textColor="@color/white"
 
         />
-
+    <Spinner
+        android:id="@+id/spin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tname"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="hiiiiiiiiiiii"
+        />
     <Button
         android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/emailView"
+        android:layout_below="@+id/spin"
         android:hint="Next"
         android:textColorHint="@color/white"
         android:layout_gravity="center"
