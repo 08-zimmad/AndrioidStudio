@@ -20,9 +20,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     EditText email;
     AutoCompleteTextView teacherName;
     Button nxtBtn;
-    String getTeacherName;
+    String getTeacherName, getCourseName;
     String getEmail;
-    Intent intent;
     Spinner spinner;
     ArrayList <String> names;
     @Override
@@ -33,20 +32,24 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         teacherName=(AutoCompleteTextView) findViewById(R.id.tname);
         nxtBtn=(Button) findViewById(R.id.btn);
         setTeacherName();
+
+        spinner=(Spinner) findViewById(R.id.spin);
+        ArrayAdapter<CharSequence> cNameAdaptr=ArrayAdapter.createFromResource(this, R.array.courseName, android.R.layout.simple_spinner_dropdown_item);
+        cNameAdaptr.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(cNameAdaptr);
+
         nxtBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 getEmail=email.getText().toString();
                 getTeacherName=teacherName.getText().toString();
-                Toast toast=Toast.makeText(getApplicationContext(),getEmail,Toast.LENGTH_LONG);
-                toast.show();
+                getCourseName=spinner.getSelectedItem().toString();
+                Intent intent=new Intent(MainActivity.this, Evaluation.class);
+                startActivity(intent);
+
             }
         });
-        spinner=(Spinner) findViewById(R.id.spin);
-        ArrayAdapter<CharSequence> cNameAdaptr=ArrayAdapter.createFromResource(this, R.array.courseName, android.R.layout.simple_spinner_dropdown_item);
-        cNameAdaptr.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(cNameAdaptr);
-        spinner.setOnItemClickListener();
+
     }
     protected void setTeacherName()
     {
@@ -68,7 +71,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
+        String text= adapterView.getItemAtPosition(i).toString();
+        Toast.makeText(adapterView.getContext(),text, Toast.LENGTH_LONG).show();
     }
 
     @Override

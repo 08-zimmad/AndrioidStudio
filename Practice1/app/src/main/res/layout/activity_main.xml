@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="@drawable/background2"
     tools:context=".MainActivity"
 
 
@@ -18,11 +19,12 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_gravity="center"
         android:textSize="80px"
-        android:textColor="#271326"
+        android:textColor="#995500ED"
         android:fontFamily="sans-serif"
         android:layout_margin="10dp"
         android:textAllCaps="true"
         android:textStyle="normal"
+
 
         />
 
@@ -61,7 +63,7 @@
         android:layout_below="@+id/tname"
         android:layout_gravity="center"
         android:layout_margin="10dp"
-        android:text="hiiiiiiiiiiii"
+
         />
     <Button
         android:id="@+id/btn"
