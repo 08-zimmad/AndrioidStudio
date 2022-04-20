@@ -2,45 +2,92 @@ package com.example.practice1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
 
-public class Evaluation extends AppCompatActivity {
-    RadioGroup rGroup1,rGroup2,rGroup3;
-    RadioButton rbtn1,rbtn2,rbtn3;
-    Button bttn;
+import java.util.ArrayList;
 
+public class Evaluation extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+
+
+    EditText email;
+    AutoCompleteTextView teacherName;
+    Button nxtBtn;
+    String getTeacherName, getCourseName;
+    String getEmail;
+    Spinner spinner;
+    ArrayList<String> names;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_evaluation);
+        setContentView(R.layout.activity_main);
+        email =(EditText) findViewById(R.id.emailView);
+        teacherName=(AutoCompleteTextView) findViewById(R.id.tname);
+        nxtBtn=(Button) findViewById(R.id.btn);
+        setTeacherName();
 
-        rGroup1= (RadioGroup) findViewById(R.id.radio);
-        rGroup2= (RadioGroup) findViewById(R.id.radio2);
-        rGroup3= (RadioGroup) findViewById(R.id.radio3);
-
-        bttn=(Button) findViewById(R.id.btn);
-        bttn.setOnClickListener(new View.OnClickListener() {
+        spinner=(Spinner) findViewById(R.id.spin);
+        ArrayAdapter<CharSequence> cNameAdaptr=ArrayAdapter.createFromResource(this, R.array.courseName, android.R.layout.simple_spinner_dropdown_item);
+        cNameAdaptr.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(cNameAdaptr);
+        spinner.setOnItemSelectedListener(this);
+        //Button
+        nxtBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            int rId1,rId2,rId3;
-            rId1=rGroup1.getCheckedRadioButtonId();
-            rId2=rGroup2.getCheckedRadioButtonId();
-            rId3=rGroup3.getCheckedRadioButtonId();
-            rbtn1=(RadioButton) findViewById(rId1);
-            rbtn2=(RadioButton) findViewById(rId2);
-            rbtn3=(RadioButton) findViewById(rId3);
+                getEmail=email.getText().toString();
+                getTeacherName=teacherName.getText().toString();
+                getCourseName=spinner.getSelectedItem().toString();
 
-            rbtn2.getText();
-            rbtn3.getText();
-                Toast.makeText(Evaluation.this, rbtn1.getText()+" "+rbtn2.getText()+" "+rbtn3.getText(), Toast.LENGTH_SHORT).show();
+                Intent intent= getIntent();
+                String average=intent.getStringExtra("Average");
+
+                Bundle extras=new Bundle();
+                extras.putString("Average",average);
+                extras.putString("Email",getEmail);
+                extras.putString("TeacherName",getTeacherName);
+                extras.putString("CourseName",getCourseName);
+
+                intent=new Intent(Evaluation.this, output.class);
+                intent.putExtras(extras);
+                startActivity(intent);
+
             }
         });
+
+
+    }
+    protected void setTeacherName()
+    {
+        names=new ArrayList<String>();
+        names.add("Teacher A");
+        names.add("Teacher B");
+        names.add("Teacher C");
+        ArrayAdapter<String>tNameAdaptr=new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,names );
+        teacherName.setAdapter(tNameAdaptr);
+        teacherName.setThreshold(1);
     }
 
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+    getCourseName=adapterView.getItemAtPosition(i).toString();
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
+    }
 
 }

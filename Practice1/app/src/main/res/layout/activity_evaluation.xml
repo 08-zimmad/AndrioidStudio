@@ -15,32 +15,37 @@
         android:id="@+id/heading"
         android:layout_gravity="center_horizontal"
         android:layout_margin="10dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
 
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=" 1. Teacher knows his/her subject."
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
 
+
+        />
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="10dp"
         android:id="@+id/radio"
+        android:orientation="horizontal"
+
 
         >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Teacher knows his/her subject."
-            android:fontFamily="sans-serif"
 
-
-            />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="80%"
+            android:text="Excellent"
             android:id="@+id/rb11"
             android:fontFamily="sans-serif"
 
@@ -51,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="50%"
+            android:text="Good"
             android:id="@+id/rb12"
 
             />
@@ -61,30 +66,41 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:id="@+id/rb13"
-            android:text="20%" />
-    </RadioGroup>
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/radio2"
+            android:text="Average"
 
-        >
 
-        <TextView
+            />
+        <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Teacher is clear in giving directions and on explaining what is
-expected on assignments and tests."
-
+            android:id="@+id/rb14"
+            android:text="Not Satisfactory"
             />
+    </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=" 2. Teacher is clear in giving directions and on explaining what is
+expected on assignments and tests."
+        android:textStyle="bold"
+        />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/radio2"
+        android:orientation="horizontal"
+
+        >
+
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="80%"
+            android:text="Excellent"
             android:id="@+id/rb21"
 
             />
@@ -93,7 +109,7 @@ expected on assignments and tests."
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="50%"
+            android:text="Good"
             android:id="@+id/rb22"
             />
 
@@ -102,29 +118,37 @@ expected on assignments and tests."
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:id="@+id/rb23"
-            android:text="20%" />
-    </RadioGroup>
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/radio3"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Teacher is clear in giving directions and on explaining what is
-expected on assignments and tests."
-
-            />
+            android:text="Average" />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="80%"
+            android:id="@+id/rb24"
+            android:text="Not Satisfactory" />
+    </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=" 3. Teacher manages the time well."
+        android:textStyle="bold"
+        />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/radio3"
+        android:orientation="horizontal"
+        >
+
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Excellent"
             android:id="@+id/rb31"
 
             />
@@ -133,7 +157,7 @@ expected on assignments and tests."
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="50%"
+            android:text="Good"
             android:id="@+id/rb32"
 
             />
@@ -143,14 +167,170 @@ expected on assignments and tests."
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:id="@+id/rb33"
-            android:text="20%" />
+            android:text="Average" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/rb34"
+            android:text="Not Satisfactory" />
+    </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=" 4. Lecture-notes details relevant to subject?"
+        android:textStyle="bold"
+        />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/radio4"
+        android:orientation="horizontal"
+        >
+
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Excellent"
+            android:id="@+id/rb41"
+
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Good"
+            android:id="@+id/rb42"
+
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/rb43"
+            android:text="Average" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/rb44"
+            android:text="Not Satisfactory" />
     </RadioGroup>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=" 5. Teacher Presence in Class:"
+        android:textStyle="bold"
+        />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/radio5"
+        android:orientation="horizontal"
+        >
+
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Excellent"
+            android:id="@+id/rb51"
+
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Good"
+            android:id="@+id/rb52"
+
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/rb53"
+            android:text="Average" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/rb54"
+            android:text="Not Satisfactory" />
+    </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=" 6. Quiz, Assignment's evaluation is:"
+        android:textStyle="bold"
+        />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/radio6"
+        android:orientation="horizontal"
+        >
+
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Excellent"
+            android:id="@+id/rb61"
+
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Good"
+            android:id="@+id/rb62"
+
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/rb63"
+            android:text="Average" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/rb64"
+            android:text="Not Satisfactory" />
+    </RadioGroup>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Evaluate"
         android:layout_gravity="center"
         android:id="@+id/btn"
+        android:layout_marginTop="10dp"
         />
+
 </LinearLayout>
