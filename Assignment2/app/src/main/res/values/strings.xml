@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Assignment2</string>
+    <string-array name="courseName">
+        <item>Course1</item>
+        <item>Course2</item>
+        <item>Course3</item>
+        <item>Course4</item>
+        <item>Course5</item>
+        <item>Course6</item>
+    </string-array>
+</resources>

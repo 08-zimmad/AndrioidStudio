@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/zimmad/AndroidStudioProjects/AndrioidStudio/Practice1/app/src/main/res/layout/activity_campus_name.xml" value="0.1" />
         <entry key="..\:/Users/zimmad/AndroidStudioProjects/AndrioidStudio/Practice1/app/src/main/res/layout/activity_evaluation.xml" value="0.22" />
+        <entry key="..\:/Users/zimmad/AndroidStudioProjects/AndrioidStudio/Practice1/app/src/main/res/layout/activity_list_view.xml" value="0.184375" />
         <entry key="..\:/Users/zimmad/AndroidStudioProjects/AndrioidStudio/Practice1/app/src/main/res/layout/activity_main.xml" value="0.1852355072463768" />
         <entry key="..\:/Users/zimmad/AndroidStudioProjects/AndrioidStudio/Practice1/app/src/main/res/layout/activity_output.xml" value="0.184375" />
         <entry key="..\:/Users/zimmad/AndroidStudioProjects/AndrioidStudio/Practice1/app/src/main/res/layout/evaluationactivity.xml" value="0.1852355072463768" />

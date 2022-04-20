@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".NextActivity"
+
+
+    >
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Teacher Survey Form"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="center"
+        android:textSize="80px"
+        android:textColor="#995500ED"
+        android:fontFamily="sans-serif"
+        android:layout_margin="10dp"
+        android:textAllCaps="true"
+        android:textStyle="normal"
+
+
+        />
+
+    <EditText
+        android:id="@+id/emailView"
+        android:layout_width="700px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="E-mail"
+        android:background="#99673AB7"
+        android:textColorHint="@color/white"
+        android:fontFamily="sans-serif"
+        android:padding="10dp"
+        android:layout_marginTop="150dp"
+        android:textColor="@color/white"
+        />
+
+    <AutoCompleteTextView
+        android:id="@+id/tname"
+        android:layout_width="700px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:hint="Teacher Name"
+        android:textColorHint="@color/white"
+        android:background="#99673AB7"
+        android:padding="10dp"
+        android:layout_below="@+id/emailView"
+        android:textColor="@color/white"
+
+        />
+    <Spinner
+        android:id="@+id/spin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tname"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+
+        />
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spin"
+        android:hint="Next"
+        android:textColorHint="@color/white"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        />
+</LinearLayout>
