@@ -47,8 +47,7 @@ public class Evaluation extends AppCompatActivity {
                 rbtn6 = (RadioButton) findViewById(rId6);
 
                 if (rbtn1 == null || rbtn2 == null || rbtn3 == null || rbtn4 == null || rbtn5 == null || rbtn6 == null) {
-                    Toast toast = Toast.makeText(getApplicationContext(), "Complete Survey", Toast.LENGTH_LONG);
-                    toast.show();
+                    Toast.makeText(getApplicationContext(), "Complete Survey", Toast.LENGTH_LONG).show();
                 } else {
 
                     R_Group1Eval(rbtn1.getText().toString());
