@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".User">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:hint="Name"
+        android:ems="10"
+        android:id="@+id/namefield"
+
+        />
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:hint="Age"
+        android:ems="10"
+        android:id="@+id/agefield"
+
+        />
+        ></LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logbtn"
+        android:text="Logout" />
+
+</LinearLayout>
